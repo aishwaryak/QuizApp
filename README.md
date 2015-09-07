@@ -25,3 +25,28 @@ Install express-session
 Run the app : 
 
 > node app.js
+
+
+Installing nodejs and expressjs
+--------------------------------------
+
+> sudo apt-get upgrade
+
+> sudo apt-get install nodejs
+
+Install node package manager
+> sudo apt-get install npm
+
+Create a symbolic link
+> sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+Check if they are working
+> node -v
+> npm -v
+
+(http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#ubuntu-package-manager)
+
+To install express
+> npm install express
+
+(http://expressjs.com/starter/hello-world.html)
