@@ -1,0 +1,12 @@
+.center {
+  width:65%;
+  margin:0 auto;
+}
+.right {
+	display: block;
+    float: right;
+    margin-right: 4%;
+}
+.clearBoth {
+	clear:both;
+}

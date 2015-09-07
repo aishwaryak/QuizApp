@@ -1,0 +1,47 @@
+<html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="/stylesheets/adminStyle.css" /> 
+      <script src="/javascripts/adminScript.js"></script>
+  </head>
+  <body>
+    <div class="right"><a href="/logout">Logout</a></div>
+    <div class="clearBoth">
+    <div class="center">
+      <form method="post" action="/" id="questionForm">
+          <div class="data-table">
+              <table id="summaryTable" border="1" cellpadding="7" cellspacing="7">
+                  <tr>
+                      <th width="50px">No</th>
+                      <th>Username</th>
+                      <th>Answer1</th>
+                      <th>Feedback1</th>
+                      <th>Answer2</th>
+                      <th>Feedback2</th>
+                      <th>Answer3</th>
+                      <th>Feedback3</th>
+                  </tr>                               
+                  <% if(myData.length>0){ 
+                for(var i = 0;i < myData.length;i++) { %>     
+                  <tr>
+                      <td><%=(i+1)%></td>
+                      <td><%=myData[i].username%></td>
+                      <td><%=myData[i].answer1%></td>
+                      <td><%=myData[i].feedback1%></td>
+                      <td><%=myData[i].answer2%></td>
+                      <td><%=myData[i].feedback2%></td>
+                      <td><%=myData[i].answer3%></td>
+                      <td><%=myData[i].feedback3%></td>
+                  </tr>
+              <% }
+              
+               }else{ %>
+                   <tr>
+                      <td colspan="3">No user</td>
+                   </tr>
+              <% } %>
+              </table>
+          </div>
+      </form>
+    </div>  
+  </body>
+</html>    

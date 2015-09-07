@@ -1,0 +1,25 @@
+<html>
+	<head>
+	 	<link rel="stylesheet" type="text/css" href="/stylesheets/indexStyle.css" /> 
+	</head>
+	
+	<body>
+	 	<div class="center topMargin">
+	 		<% if (typeof error != 'undefined') { %>
+	    	<h2><%= error %></h2>
+			<% } %>
+		    <form action="/enter" method="post">
+		    	<label for="username">Username:</label>
+		    	<input type="text" id="username" name="username"/> <br/>
+		    	<label for="password">Password:</label>
+		    	<input type="password" id="password" name="password" /> <br/>
+		    	
+		    	<div class="ButtonCenter"> 
+		    		<input type="submit" value="Login" /> 
+	    		</div>
+		  	</form>
+	 	</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,16 @@
+.center {
+  width:48%;
+  margin:0 auto;
+}
+.buttonCenter {
+  width:30%;
+  margin:0 auto;
+}
+.right {
+	display: block;
+    float: right;
+    margin-right: 4%;
+}
+.clearBoth {
+	clear:both;
+}

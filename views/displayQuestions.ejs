@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/displayQuestionStyle.css" /> 
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/javascripts/displayQuestionScript.js"></script>
+  </head>
+
+  <body>
+    <div class="right"><a href="/logout">Logout</a></div>
+    <div class="clearBoth">
+    <div class="center">
+        <% if (typeof error != 'undefined') { %>
+          <h2><%= error %></h2>
+        <% } %>
+      <form method="post" action="/" id="questionForm">
+          <div class="data-table">
+              <table id="questionsTable" border="1" cellpadding="7" cellspacing="7">
+                  <tr>
+                      <th width="50px">No</th>
+                      <th>Questions</th>
+                      <th>Options</th>
+                      <th>Feedback</th>
+                  </tr>                               
+                  <% if(myData.length>0){ 
+                for(var i = 0;i < myData.length;i++) { %>     
+
+
+                  <tr>
+                      <td><%=(i+1)%></td>
+                      <td><%=myData[i].questions%></td>
+                      <td>
+
+                      <input type="radio" name="youranswers<%=(i+1)%>" value="<%=myData[i].optionOne%>" checked> <%=myData[i].optionOne%> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <input type="radio" name="youranswers<%=(i+1)%>" value="<%=myData[i].optionTwo%>"> <%=myData[i].optionTwo%>
+                      <td> <input type="text" id="feedback<%=(i+1)%>" name="feedback<%=(i+1)%>" value="Pending" readonly/> <input type="hidden" id="actualAnswer<%=(i+1)%>" value="<%=myData[i].answers%>" /></td>
+                  </tr>
+              <% }
+              
+               }else{ %>
+                   <tr>
+                      <td colspan="3">No user</td>
+                   </tr>
+              <% } %>
+                                                               
+              </table>
+          </div>
+
+          <div class="buttonCenter">
+            <input type="submit" id="submit" value="Submit" />
+          </div>
+
+      </form>
+
+    </div>   
+  </body>
+</html>   

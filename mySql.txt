@@ -1,0 +1,28 @@
+use sampledb;
+
+drop table questions_table;
+
+drop table user_answers;
+
+drop table users;
+
+create table questions_table(questions varchar(30),optionOne varchar(30), optionTwo varchar(30),answers varchar(30));
+
+insert into questions_table values("1+2","7","3","3");
+
+insert into questions_table values("3*5","12","15","15");
+
+insert into questions_table values("7-5","2","12","2");
+
+create table users(username varchar(30), password varchar(30), role varchar(30), primary key(username));
+
+insert into users values('hsmith','smith','user');
+insert into users values('tbucktoo','bucktoo','user');
+insert into users values('jadmin','admin','admin');
+
+create table user_answers(username varchar(30),answer1 varchar(30),feedback1 varchar(30),answer2 varchar(30),feedback2 varchar(30),answer3 varchar(30),feedback3 varchar(30),foreign key (username) REFERENCES users(username));
+
+select * from questions_table;
+
+select * from users;
+
