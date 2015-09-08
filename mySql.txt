@@ -1,3 +1,5 @@
+create database sampledb;
+
 use sampledb;
 
 drop table questions_table;

@@ -48,7 +48,6 @@ app.use('/logout',logoutController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  console.log("coming to this use func");
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -58,7 +57,7 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
+/*if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
     console.log("Dev request sent");
     console.log(err.message);
@@ -68,7 +67,7 @@ if (app.get('env') === 'development') {
       error: err
     });
   });
-}
+}*/
 
 // production error handler
 // no stacktraces leaked to user
@@ -83,7 +82,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-var server = app.listen(3000, function () {
+var server = app.listen(8000, function () {
   var host = server.address().address;
   var port = server.address().port;
 
