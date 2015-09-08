@@ -6,7 +6,9 @@ App set up
 ------------ 
 
 > express quizApp
+
 > cd quizApp
+
 > npm install 
 
 > npm install ejs
@@ -42,6 +44,7 @@ Create a symbolic link
 
 Check if they are working
 > node -v
+
 > npm -v
 
 (http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#ubuntu-package-manager)
