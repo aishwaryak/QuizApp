@@ -49,4 +49,6 @@ Check if they are working
 To install express
 > npm install express
 
+>sudo apt-get install mysql-server
+
 (http://expressjs.com/starter/hello-world.html)
