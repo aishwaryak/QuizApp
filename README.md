@@ -57,3 +57,5 @@ To install express
 >sudo apt-get install mysql-server
 
 (http://expressjs.com/starter/hello-world.html)
+
+> mysql -u root -p
