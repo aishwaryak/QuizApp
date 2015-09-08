@@ -30,7 +30,7 @@ Run the app :
 Installing nodejs and expressjs
 --------------------------------------
 
-> sudo apt-get upgrade
+> sudo apt-get update
 
 > sudo apt-get install nodejs
 
