@@ -5,7 +5,7 @@ var mysql      = require('mysql');
 
 //Connectin to MYSQL Database
 var connection = mysql.createConnection({
-    host     : ' mysql-instance2.ckjgb2zflews.us-east-1.rds.amazonaws.com',
+    host     : 'mysql-instance2.ckjgb2zflews.us-east-1.rds.amazonaws.com',
     user     : 'root',
     password : 'aishwarya',
     database : 'sampledb',
